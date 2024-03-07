@@ -7,7 +7,7 @@ export default MainComponent = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchtext, setSearchText] = useState("");
-  const [filteredList, setFilteredList] = useState([])
+  const [filteredList, setFilteredList] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -24,7 +24,7 @@ export default MainComponent = () => {
         ?.restaurants;
 
     setListOfRestaurant(restaurantList);
-    setFilteredList(restaurantList)
+    setFilteredList(restaurantList);
     setIsLoading(false);
   };
 
@@ -54,10 +54,18 @@ export default MainComponent = () => {
                   setSearchText(e.target.value);
                 }}
               />
-              <button onClick={() => {
-                let data = listOfRestaurant.filter((res) =>res.info.name.toLowerCase().includes(searchtext.toLowerCase()))
-                setFilteredList(data)
-              }}>Search</button>
+              <button
+                onClick={() => {
+                  let data = listOfRestaurant.filter((res) =>
+                    res.info.name
+                      .toLowerCase()
+                      .includes(searchtext.toLowerCase())
+                  );
+                  setFilteredList(data);
+                }}
+              >
+                Search
+              </button>
             </div>
           </div>
 
