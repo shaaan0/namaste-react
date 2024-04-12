@@ -125,3 +125,28 @@
     margin:20px 10px;
     padding: 0 5px;
 }
+
+.menu-box{
+    box-sizing: border-box;
+    border: 1px solid gray;
+    padding:10 12px ;
+    margin: 2px;
+    
+}
+.menu-title{
+    font-weight: 800;
+    font-size: 18px;
+    padding:10px 0 ;
+}
+.menu-items{
+    
+    line-height: 1.6;
+}
+.menu-items li{
+    list-style-type: none;
+    
+}
+a {
+    text-decoration: none;
+    color: black;
+}
