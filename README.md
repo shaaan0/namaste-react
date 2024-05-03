@@ -22,3 +22,7 @@
 
 
 #
+
+
+Create a .postcssrc file in your project root, and enable the tailwindcss plugin.
+
